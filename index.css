@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.animated-banner{
+    height: 160px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    --offset:0px;
+    --blur:0px;
+}
+
+.layer > img {
+    display: block;
+    width: 110%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .5s;
+    transform: translateX(var(--offset));
+    filter: blur(var(--blur));
+}
